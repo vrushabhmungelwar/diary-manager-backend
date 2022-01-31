@@ -54,7 +54,7 @@ router.route("/resetpassword/:id/:token").get(async (req, res) => {
     const token = await getToken(user._id, req.params.token);
     if (!token) return res.status(400).send("Invalid link");
 
-    res.writeHead(301, { Location: "http://localhost:3000/resetpassword" });
+    res.writeHead(301, { Location: "https://gifted-sinoussi-8c14db.netlify.app/#/resetpassword" });
     res.end();
   } catch (error) {
     res.status(400).send("An error occured");
