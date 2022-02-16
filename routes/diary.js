@@ -13,7 +13,7 @@ router.route("/").post(async (request, response) => {
     const usersdata = await getDiaryByUserId(userId);
     const current = new Date();
     const fdate = `${current.getDate()}-${
-      current.getMonth() + 2
+      current.getMonth() + 1
     }-${current.getFullYear()}`;
     if (!usersdata) {
       const diary = [];
